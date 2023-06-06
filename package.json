@@ -1,0 +1,22 @@
+{
+  "name": "ng-node-trello-repo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "bootstrap": "lerna bootstrap",
+    "start:monorepo": "npm run start:angular & npm run start:node",
+    "start:angular": "cd packages/ng-trello && npm start",
+    "start:node": "cd packages/node-trello && npm start"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "workspaces": [
+    "packages/*"
+  ],
+  "devDependencies": {
+    "lerna": "^6.6.2"
+  }
+}
