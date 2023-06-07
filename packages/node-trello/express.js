@@ -1,10 +1,14 @@
 const express = require('express');
+const db = require('./database');
+const cardsRouter = require('./cards');
 const app = express();
 const bodyParser = require('body-parser');
 
 // Middleware
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
+
+app.use('/cards', cardsRouter);
 
 // Routes
 app.post('/login', (req, res) => {
